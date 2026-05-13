@@ -27,7 +27,7 @@ export default function App() {
             case "code":
                 return <Skills/>;
             case "python":
-                return <p style={{ padding: 24 }}>Python — coming soon</p>;
+                return <p style={{ padding: 24 }}>Python —  skill set coming soon</p>;
             default:
                 return <p style={{ padding: 24 }}>Page not found</p>;
         }

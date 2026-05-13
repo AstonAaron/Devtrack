@@ -8,14 +8,24 @@ const projects = [
     id: 1,
     title: "DevTrack Portfolio",
     description:
-      "A dynamic developer portfolio and skill-tracking app built with React. Features animated skill bars, filterable project cards, and a live code viewer.",
+      "(This is what you are currently on) A dynamic developer portfolio and skill-tracking app built with React. Features animated skill bars, filterable project cards, and a live code viewer.",
     tags: ["React", "JavaScript", "CSS"],
     githubUrl: "https://github.com/YOUR_USERNAME/devtrack",
     liveUrl: "",   // leave "" if no live demo
-    featured: true,                           // featured cards get a highlight treatment
+    featured: false,                           // featured cards get a highlight treatment
   },
   {
     id: 2,
+    title: "Survival-Inventory",
+    description: "A Stunning remake of a beloved mechanic from one of gamings most influential horror games",
+    tags: ["React", "JavaScript", "CSS"],
+    githubUrl: "https://github.com/AstonAaron/Survival-inventory-demo",
+    liveUrl: "",
+    featured: true,
+  },
+  
+  {
+    id: 3,
     title: "Barbershop website",
     description:
       "A responsive website for a local barbershop, featuring a modern design and easy navigation.",
@@ -25,7 +35,7 @@ const projects = [
     featured: false,
   },
   {
-    id: 3,
+    id: 4,
     title: "Authors website",
     description:
       "A stylized website showcasing a collection of works from my sister who is an author. This site is built with HTML and CSS, featuring a style inspired by her book covers.",
@@ -35,7 +45,7 @@ const projects = [
     featured: false,
   },
   {
-    id: 4,
+    id: 5,
     title: "Coffee Shop",
     description:
       "A simple website for a coffee shop, built with React. It features a clean design and showcases the shop's menu and location.",

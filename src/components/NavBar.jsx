@@ -4,10 +4,10 @@ import "./NavBar.css"; // Import styles for the navbar
 // Navigation items — add or remove sections here
 const NAV_ITEMS = [
   { id: "home",     label: "Home",         icon: "⌂" },
-  { id: "skills",   label: "Skills",       icon: "◈" },
   { id: "projects", label: "Projects",     icon: "▤" },
   { id: "code",     label: "Code Samples", icon: "</>" },
   { id: "python",   label: "Python",       icon: "⬡" },
+  { id: "contact", label: "Contact",       icon: " 🖂 "},
 ];
 
 export default function Navbar({ activePage, onNavigate }) {
