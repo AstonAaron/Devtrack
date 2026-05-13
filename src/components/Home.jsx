@@ -9,12 +9,12 @@ export default function Home() {
                 <img
                     src={logo}
                     alt="Logo banner"
-                    className="mx-auto w-full max-w-[420px] object-contain sm:h-[24vh] md:h-[28vh] lg:h-[32vh]"
+                    className="mx-auto w-full max-w-105 object-contain sm:h-[24vh] md:h-[28vh] lg:h-[32vh]"
                 />
 
                 <section className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl backdrop-blur-xl">
                     <div className="grid gap-6 lg:grid-cols-[280px_1fr] lg:items-center">
-                        <div className="mx-auto w-full max-w-[280px] overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+                        <div className="mx-auto w-full max-w-70 overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
                             <img
                                 src={profile}
                                 alt="Profile"

@@ -28,7 +28,7 @@ export default function Skills() {
     }, [isDark]);
 
     return (
-        <main className="min-h-[100svh] bg-slate-950 text-slate-100 px-6 py-10">
+        <main className="min-h-svh bg-slate-950 text-slate-100 px-6 py-10">
             <div className="mx-auto max-w-5xl space-y-12">
                 <section className="rounded-3xl border border-white/10 bg-slate-900/80 p-8 shadow-2xl backdrop-blur-xl">
                     <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
@@ -58,7 +58,7 @@ export default function Skills() {
                                 This preview area updates immediately when you toggle dark mode,
                                 demonstrating how JavaScript can control theme state.
                             </p>
-                            <div className="mt-6 space-y-3 rounded-2xl border border-current/10 bg-gradient-to-br from-cyan-500/10 to-slate-900/20 p-4 text-sm">
+                            <div className="mt-6 space-y-3 rounded-2xl border border-current/10 bg-liner-to-br from-cyan-500/10 to-slate-900/20 p-4 text-sm">
                                 <div className="rounded-2xl bg-slate-950/90 p-4 text-slate-100">
                                     <p className="font-semibold">Current theme:</p>
                                     <p>{isDark ? "Dark mode enabled" : "Light mode enabled"}</p>

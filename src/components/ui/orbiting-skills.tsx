@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState, memo } from "react";
+import "./orbiting-skills.css";
 
 // --- Type Definitions ---
 type IconType = "html" | "css" | "javascript" | "react" | "node" | "tailwind";
@@ -188,7 +189,7 @@ const OrbitingSkill = memo(({ config, angle }: OrbitingSkillProps) => {
 
     return (
         <div
-            className="absolute top-1/2 left-1/2 transition-all duration-300 ease-out"
+            className="orbiting-skill-root"
             style={{
                 width: `${size}px`,
                 height: `${size}px`,
@@ -198,23 +199,14 @@ const OrbitingSkill = memo(({ config, angle }: OrbitingSkillProps) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}>
             <div
-                className={`
-          relative w-full h-full p-2 bg-gray-800/90 backdrop-blur-sm
-          rounded-full flex items-center justify-center
-          transition-all duration-300 cursor-pointer
-          ${isHovered ? "scale-125 shadow-2xl" : "shadow-lg hover:shadow-xl"}
-        `}
+                className={`orbiting-skill-inner ${isHovered ? "hovered" : ""}`}
                 style={{
                     boxShadow: isHovered
                         ? `0 0 30px ${iconComponents[iconType]?.color}40, 0 0 60px ${iconComponents[iconType]?.color}20`
                         : undefined
                 }}>
                 <SkillIcon type={iconType} />
-                {isHovered && (
-                    <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-900/95 backdrop-blur-sm rounded text-xs text-white whitespace-nowrap pointer-events-none">
-                        {label}
-                    </div>
-                )}
+                {isHovered && <div className="orbiting-skill-tooltip">{label}</div>}
             </div>
         </div>
     );
@@ -301,9 +293,9 @@ export default function OrbitingSkills() {
     ];
 
     return (
-        <main className="w-full flex items-center justify-center overflow-hidden">
+        <main className="orbiting-skills-root">
             {/* Background pattern */}
-            <div className="absolute inset-0 opacity-10">
+            <div className="orbiting-skills-background">
                 <div
                     className="absolute inset-0"
                     style={{
@@ -314,14 +306,14 @@ export default function OrbitingSkills() {
             </div>
 
             <div
-                className="relative w-[calc(100vw-40px)] h-[calc(100vw-40px)] md:w-[450px] md:h-[450px] flex items-center justify-center"
+                className="orbiting-skills-wrapper"
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}>
                 {/* Central \"Code\" Icon with enhanced glow */}
-                <div className="w-20 h-20 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center z-10 relative shadow-2xl">
-                    <div className="absolute inset-0 rounded-full bg-cyan-500/30 blur-xl animate-pulse"></div>
+                <div className="orbiting-skills-central">
+                    <div className="orbiting-skills-glow-cyan"></div>
                     <div
-                        className="absolute inset-0 rounded-full bg-purple-500/20 blur-2xl animate-pulse"
+                        className="orbiting-skills-glow-purple"
                         style={{ animationDelay: "1s" }}></div>
                     <div className="relative z-10">
                         <svg
