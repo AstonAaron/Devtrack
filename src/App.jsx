@@ -3,6 +3,8 @@ import Navbar from "./components/NavBar";
 import Projects from "./components/Projects";
 import Home from "./components/Home";
 import Skills from "./components/Skills"
+import Contact from "./components/Contact"
+
 
 
 
@@ -28,6 +30,8 @@ export default function App() {
                 return <Skills/>;
             case "python":
                 return <p style={{ padding: 24 }}>Python —  skill set coming soon</p>;
+            case "contact":
+                return <Contact/>;
             default:
                 return <p style={{ padding: 24 }}>Page not found</p>;
         }
@@ -41,6 +45,8 @@ export default function App() {
 
             {/* Main content area — swap placeholders for real components */}
             <main>{renderPage()}</main>
+            
+          
         </div>
     );
 }
