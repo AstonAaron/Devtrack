@@ -2,6 +2,44 @@ import OrbitingSkills from "./ui/orbiting-skills";
 import { Component } from "./ui/gradient-bars-background";
 import logo from "../assets/logo.png";
 import profile from "../assets/profile.jpg";
+import htmlCssCert from "../assets/HTMLCSS_Cert.png";
+import javaScriptCert from "../assets/JavaScript_Cert.png";
+import reactCert from "../assets/React_Cert.png";
+import fiberOpticCert from "../assets/fiber_optic.png";
+import clearanceCert from "../assets/clearance.png";
+
+const certifications = [
+    {
+        title: "HTML5 & CSS3 Certification",
+        issuer: "VetBoss COITB",
+        image: htmlCssCert,
+        status: "Active"
+    },
+    {
+        title: "JavaScript Certification",
+        issuer: "VetBoss COITB",
+        image: javaScriptCert,
+        status: "Active"
+    },
+    {
+        title: "React Certification",
+        issuer: "VetBoss COITB",
+        image: reactCert,
+        status: "Active"
+    },
+    {
+        title: "Fiber Optic Certification",
+        issuer: "U.S. Government",
+        image: fiberOpticCert,
+        status: "Current"
+    },
+    {
+        title: "Top Secret SCI Clearance",
+        issuer: "U.S. Government",
+        image: clearanceCert,
+        status: "Current"
+    }
+];
 
 export default function Home() {
     return (
@@ -139,45 +177,41 @@ export default function Home() {
                     <OrbitingSkills />
                 </div>
 
-                {/* Awards & Clearance */}
+                {/* Training & Clearance */}
                 <section className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl backdrop-blur-xl">
-                    <h2 className="mb-6 text-3xl font-semibold text-white">
-                        Awards, Training & Clearance
+                    <h2 className="mb-4 text-3xl font-semibold text-white">
+                        Training & Clearance
                     </h2>
+                    <p className="mb-8 text-slate-300">
+                        My current certifications and security clearance. I continuously pursue
+                        professional development to expand my technical expertise.
+                    </p>
 
-                    <div className="grid gap-4 md:grid-cols-3">
-                        <div className="rounded-3xl bg-slate-950/80 p-5 ring-1 ring-white/10">
-                            <h3 className="mb-3 text-xl font-semibold text-cyan-400">Awards</h3>
+                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        {certifications.map((cert, index) => (
+                            <div
+                                key={index}
+                                className="group rounded-2xl border border-white/10 bg-slate-950/50 p-4 transition hover:border-cyan-500/50 hover:bg-slate-950/80"
+                            >
+                                <div className="mb-4 overflow-hidden rounded-xl border border-white/10">
+                                    <img
+                                        src={cert.image}
+                                        alt={cert.title}
+                                        className="h-40 w-full object-cover transition group-hover:scale-105"
+                                    />
+                                </div>
 
-                            <ul className="space-y-2 text-sm text-slate-300">
-                                <li>Navy and Marine Corps Achievement Medal</li>
-                                <li>Navy Commendation Medal</li>
-                                <li>Good Conduct Medal</li>
-                            </ul>
-                        </div>
-
-                        <div className="rounded-3xl bg-slate-950/80 p-5 ring-1 ring-white/10">
-                            <h3 className="mb-3 text-xl font-semibold text-cyan-400">
-                                Education & Training
-                            </h3>
-
-                            <ul className="space-y-2 text-sm text-slate-300">
-                                <li>HTML / CSS — VetBoss COITB</li>
-                                <li>JavaScript — VetBoss COITB</li>
-                                <li>React — VetBoss COITB</li>
-                                <li>Fiber Optic Certification</li>
-                            </ul>
-                        </div>
-
-                        <div className="rounded-3xl bg-slate-950/80 p-5 ring-1 ring-white/10">
-                            <h3 className="mb-3 text-xl font-semibold text-cyan-400">Clearance</h3>
-
-                            <p className="text-sm leading-6 text-slate-300">Security Clearance:</p>
-
-                            <p className="mt-2 rounded-full bg-blue-800 px-4 py-2 text-center text-sm font-bold text-slate-000">
-                                Top Secret SCI
-                            </p>
-                        </div>
+                                <div className="space-y-2">
+                                    <h3 className="text-base font-semibold text-white">
+                                        {cert.title}
+                                    </h3>
+                                    <p className="text-sm text-slate-400">{cert.issuer}</p>
+                                    <span className="inline-block rounded-full bg-cyan-500/20 px-3 py-1 text-xs font-medium text-cyan-300">
+                                        {cert.status}
+                                    </span>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </section>
             </div>
