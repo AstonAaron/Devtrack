@@ -182,36 +182,34 @@ export default function Home() {
                     <h2 className="mb-4 text-3xl font-semibold text-white">
                         Training & Clearance
                     </h2>
-                    <p className="mb-8 text-slate-300">
-                        My current certifications and security clearance. I continuously pursue
-                        professional development to expand my technical expertise.
-                    </p>
 
-                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                        {certifications.map((cert, index) => (
-                            <div
-                                key={index}
-                                className="group rounded-2xl border border-white/10 bg-slate-950/50 p-4 transition hover:border-cyan-500/50 hover:bg-slate-950/80"
-                            >
-                                <div className="mb-4 overflow-hidden rounded-xl border border-white/10">
-                                    <img
-                                        src={cert.image}
-                                        alt={cert.title}
-                                        className="h-40 w-full object-cover transition group-hover:scale-105"
-                                    />
-                                </div>
+                    <div className="overflow-x-auto">
+                        <div className="flex gap-4 pb-2">
+                            {certifications.map((cert, index) => (
+                                <div
+                                    key={index}
+                                    className="group flex flex-col rounded-2xl border border-white/10 bg-slate-950/50 p-3 transition hover:border-cyan-500/50 hover:bg-slate-950/80 min-w-44"
+                                >
+                                    <div className="mb-3 overflow-hidden rounded-lg border border-white/10">
+                                        <img
+                                            src={cert.image}
+                                            alt={cert.title}
+                                            className="h-24 w-full object-contain bg-slate-900/50 transition group-hover:scale-105"
+                                        />
+                                    </div>
 
-                                <div className="space-y-2">
-                                    <h3 className="text-base font-semibold text-white">
-                                        {cert.title}
-                                    </h3>
-                                    <p className="text-sm text-slate-400">{cert.issuer}</p>
-                                    <span className="inline-block rounded-full bg-cyan-500/20 px-3 py-1 text-xs font-medium text-cyan-300">
-                                        {cert.status}
-                                    </span>
+                                    <div className="space-y-1 flex-1 flex flex-col">
+                                        <h3 className="text-sm font-semibold text-white leading-tight">
+                                            {cert.title}
+                                        </h3>
+                                        <p className="text-xs text-slate-400 flex-grow">{cert.issuer}</p>
+                                        <span className="inline-block rounded-full bg-cyan-500/20 px-2 py-0.5 text-xs font-medium text-cyan-300 mt-1">
+                                            {cert.status}
+                                        </span>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </section>
             </div>
