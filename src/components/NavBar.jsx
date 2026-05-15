@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Navbar.css";
+import "./navbar.css";
 
 // Navigation items — add or remove sections here
 export const NAV_ITEMS = [
