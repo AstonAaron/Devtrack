@@ -239,7 +239,7 @@
         display: flex;
     } /* show hamburger */
     .hamburger {
-        margin-left: 0;
+        margin-left: auto;
     }
     .navbar {
         position: relative;

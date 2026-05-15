@@ -1,11 +1,12 @@
 import OrbitingSkills from "./ui/orbiting-skills";
+import { Component } from "./ui/gradient-bars-background";
 import logo from "../assets/logo.png";
 import profile from "../assets/profile.jpg";
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-slate-950 text-white px-4 py-8">
-            <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-10">
+        <Component backgroundColor="rgb(2, 6, 23)">
+            <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-10 px-4 py-8">
                 <img
                     src={logo}
                     alt="Logo banner"
@@ -62,17 +63,14 @@ export default function Home() {
 
                 {/* Resume Highlights */}
                 <section className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl backdrop-blur-xl">
-                    <h2 className="mb-4 text-3xl font-semibold text-white">
-                        Resume Highlights
-                    </h2>
+                    <h2 className="mb-4 text-3xl font-semibold text-white">Resume Highlights</h2>
 
                     <p className="mb-6 leading-7 text-slate-300">
-                        Detail-oriented and results-driven professional with a strong
-                        foundation in mechanical and electrical engineering, full-stack
-                        development, system design, and problem-solving. Over 9 years of
-                        leadership experience in the U.S. Navy, with a background in
-                        operations, training, logistics, technical troubleshooting, and team
-                        development.
+                        Detail-oriented and results-driven professional with a strong foundation in
+                        mechanical and electrical engineering, full-stack development, system
+                        design, and problem-solving. Over 9 years of leadership experience in the
+                        U.S. Navy, with a background in operations, training, logistics, technical
+                        troubleshooting, and team development.
                     </p>
 
                     <div className="grid gap-4 md:grid-cols-2">
@@ -118,9 +116,7 @@ export default function Home() {
 
                     <div className="grid gap-4 md:grid-cols-3">
                         <div className="rounded-3xl bg-slate-950/80 p-5 ring-1 ring-white/10">
-                            <h3 className="mb-3 text-xl font-semibold text-cyan-400">
-                                Awards
-                            </h3>
+                            <h3 className="mb-3 text-xl font-semibold text-cyan-400">Awards</h3>
 
                             <ul className="space-y-2 text-sm text-slate-300">
                                 <li>Navy and Marine Corps Achievement Medal</li>
@@ -144,13 +140,9 @@ export default function Home() {
                         </div>
 
                         <div className="rounded-3xl bg-slate-950/80 p-5 ring-1 ring-white/10">
-                            <h3 className="mb-3 text-xl font-semibold text-cyan-400">
-                                Clearance
-                            </h3>
+                            <h3 className="mb-3 text-xl font-semibold text-cyan-400">Clearance</h3>
 
-                            <p className="text-sm leading-6 text-slate-300">
-                                Security Clearance:
-                            </p>
+                            <p className="text-sm leading-6 text-slate-300">Security Clearance:</p>
 
                             <p className="mt-2 rounded-full bg-cyan-400 px-4 py-2 text-center text-sm font-bold text-slate-950">
                                 Top Secret SCI
@@ -159,6 +151,6 @@ export default function Home() {
                     </div>
                 </section>
             </div>
-        </div>
+        </Component>
     );
 }
