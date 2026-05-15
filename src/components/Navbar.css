@@ -212,6 +212,29 @@
     font-weight: 500;
 }
 
+/* ── Mobile menu close button ── */
+.mobile-menu-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--nav-border);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--nav-text-hover);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+    transition: color 0.15s;
+}
+
+.close-btn:hover {
+    color: var(--nav-accent);
+}
+
 /* ── Responsive breakpoint ── */
 @media (max-width: 640px) {
     .navbar {

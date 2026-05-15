@@ -71,6 +71,14 @@ export default function Navbar({ activePage, onNavigate }) {
             {/* ── Mobile dropdown ── */}
             {menuOpen && (
                 <ul className="mobile-menu" role="list">
+                    <li className="mobile-menu-close">
+                        <button
+                            onClick={() => setMenuOpen(false)}
+                            aria-label="Close menu"
+                            className="close-btn">
+                            ✕
+                        </button>
+                    </li>
                     {NAV_ITEMS.map((item) => (
                         <li key={item.id}>
                             <button

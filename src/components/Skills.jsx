@@ -79,7 +79,7 @@ export default function Skills() {
                                 <h2 className="text-xl font-semibold text-white">
                                     JavaScript Code
                                 </h2>
-                                <pre className="mt-4 overflow-x-auto rounded-2xl bg-slate-900 p-4 text-sm text-slate-200 shadow-inner">
+                                <pre className="mt-4 overflow-x-auto rounded-2xl bg-slate-900 p-2 md:p-4 text-xs md:text-sm text-slate-200 shadow-inner">
                                     <code>{darkModeJsCode}</code>
                                 </pre>
                             </div>
@@ -94,7 +94,7 @@ export default function Skills() {
                         </p>
 
                         <div className="mt-6 rounded-3xl border border-slate-800 bg-slate-950 p-6">
-                            <pre className="overflow-x-auto rounded-2xl bg-slate-900 p-4 text-sm text-slate-200">
+                            <pre className="overflow-x-auto rounded-2xl bg-slate-900 p-2 md:p-4 text-xs md:text-sm text-slate-200">
                                 <code>{carouselHtmlCode}</code>
                             </pre>
                         </div>
