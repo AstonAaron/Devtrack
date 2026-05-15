@@ -18,6 +18,8 @@ const darkModeJsCode = `const toggleDarkMode = () => {
 
 export default function Skills() {
     const [isDark, setIsDark] = useState(false);
+    const [time, setTime] = useState(new Date());
+    const [currentDate, setCurrentDate] = useState(new Date());
 
     useEffect(() => {
         const root = document.documentElement;
@@ -27,6 +29,41 @@ export default function Skills() {
             root.classList.remove("dark");
         }
     }, [isDark]);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTime(new Date());
+        }, 1000);
+        return () => clearInterval(timer);
+    }, []);
+
+    const getDaysInMonth = (date) => {
+        return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+    };
+
+    const getFirstDayOfMonth = (date) => {
+        return new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+    };
+
+    const daysInMonth = getDaysInMonth(currentDate);
+    const firstDay = getFirstDayOfMonth(currentDate);
+    const monthName = currentDate.toLocaleString("default", { month: "long" });
+    const year = currentDate.getFullYear();
+    const days = [];
+
+    for (let i = 0; i < firstDay; i++) {
+        days.push(null);
+    }
+    for (let i = 1; i <= daysInMonth; i++) {
+        days.push(i);
+    }
+
+    const formattedTime = time.toLocaleTimeString("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+    });
 
     return (
         <Component backgroundColor="rgb(2, 6, 23)">
@@ -57,8 +94,7 @@ export default function Skills() {
                                 className={`rounded-3xl border p-6 shadow-inner transition ${isDark ? "border-slate-700 bg-slate-950" : "border-slate-300 bg-white text-slate-950"}`}>
                                 <h2 className="text-xl font-semibold">Live Preview</h2>
                                 <p className="mt-3 text-sm leading-6 text-slate-400">
-                                    This preview area updates immediately when you toggle dark mode,
-                                    demonstrating how JavaScript can control theme state.
+                                    This prievew demonstrates dark mode function found on many sites
                                 </p>
                                 <div className="mt-6 space-y-3 rounded-2xl border border-current/10 bg-liner-to-br from-cyan-500/10 to-slate-900/20 p-4 text-sm">
                                     <div className="rounded-2xl bg-slate-950/90 p-4 text-slate-100">
@@ -87,10 +123,69 @@ export default function Skills() {
                     </section>
 
                     <section className="rounded-3xl border border-white/10 bg-slate-900/80 p-8 shadow-2xl backdrop-blur-xl">
+                        <h2 className="text-3xl font-semibold text-white mb-6">Clock & Calendar</h2>
+
+                        <div className="grid gap-6 md:grid-cols-2">
+                            {/* Clock */}
+                            <div className="rounded-3xl border border-slate-800/90 bg-slate-950 p-6 flex flex-col items-center justify-center min-h-48">
+                                <div className="text-center">
+                                    <p className="text-slate-400 text-sm mb-2">Current Time</p>
+                                    <div className="font-mono text-5xl font-bold text-cyan-400">
+                                        {formattedTime}
+                                    </div>
+                                    <p className="text-slate-400 text-sm mt-4">
+                                        {time.toLocaleDateString("en-US", {
+                                            weekday: "long",
+                                            year: "numeric",
+                                            month: "long",
+                                            day: "numeric"
+                                        })}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Calendar */}
+                            <div className="rounded-3xl border border-slate-800/90 bg-slate-950 p-6">
+                                <div className="text-center mb-4">
+                                    <h3 className="text-lg font-semibold text-white">
+                                        {monthName} {year}
+                                    </h3>
+                                </div>
+
+                                <div className="grid grid-cols-7 gap-1">
+                                    {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
+                                        <div
+                                            key={day}
+                                            className="text-center text-xs font-semibold text-cyan-400 py-2"
+                                        >
+                                            {day}
+                                        </div>
+                                    ))}
+
+                                    {days.map((day, index) => (
+                                        <div
+                                            key={index}
+                                            className={`text-center py-2 rounded text-sm ${
+                                                day === null
+                                                    ? ""
+                                                    : day === currentDate.getDate()
+                                                    ? "bg-cyan-500/30 text-cyan-300 font-semibold"
+                                                    : "text-slate-300 hover:bg-slate-800/50"
+                                            }`}
+                                        >
+                                            {day}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="rounded-3xl border border-white/10 bg-slate-900/80 p-8 shadow-2xl backdrop-blur-xl">
                         <h2 className="text-3xl font-semibold text-white">HTML Carousel Example</h2>
                         <p className="mt-3 max-w-2xl text-slate-300">
-                            This section shows a simple HTML structure for a carousel component. Use
-                            this markup as the foundation for a slider or onboarding flow.
+                            This section shows a simple HTML structure for a carousel component. Carousel is 
+                            how you can convay multiple images in a small amount of space.
                         </p>
 
                         <div className="mt-6 rounded-3xl border border-slate-800 bg-slate-950 p-6">
