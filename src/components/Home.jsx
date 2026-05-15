@@ -13,6 +13,35 @@ export default function Home() {
                     className="mx-auto w-full max-w-105 object-contain sm:h-[24vh] md:h-[28vh] lg:h-[32vh]"
                 />
 
+                <style>{`
+                    .wavy-text {
+                        font-size: 0.75rem;
+                        font-weight: 600;
+                        color: transparent;
+                        background: linear-gradient(90deg, transparent, white, transparent);
+                        background-size: 140% 100%;
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        animation: loading 2s ease-in-out infinite;
+                    }
+                    @keyframes loading {
+                        0% { background-position: -200% 0; }
+                        100% { background-position: 200% 0; }
+                    }
+                    @media (min-width: 640px) {
+                        .wavy-text {
+                            font-size: 1.75rem;
+                        }
+                    }
+                    @media (min-width: 1024px) {
+                        .wavy-text {
+                            font-size: 4.75rem;
+                        }
+                    }
+                `}</style>
+
+                <h2 className="wavy-text">Check out the tabs to explore further</h2>
+
                 <section className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl backdrop-blur-xl">
                     <div className="grid gap-6 lg:grid-cols-[280px_1fr] lg:items-center">
                         <div className="mx-auto w-full max-w-70 overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
@@ -134,8 +163,7 @@ export default function Home() {
                                 <li>HTML / CSS — VetBoss COITB</li>
                                 <li>JavaScript — VetBoss COITB</li>
                                 <li>React — VetBoss COITB</li>
-                                <li>ILDC Leadership Course</li>
-                                <li>Gunner’s Mate A School / C School VLS</li>
+                                <li>Fiber Optic Certification</li>
                             </ul>
                         </div>
 
@@ -144,7 +172,7 @@ export default function Home() {
 
                             <p className="text-sm leading-6 text-slate-300">Security Clearance:</p>
 
-                            <p className="mt-2 rounded-full bg-cyan-400 px-4 py-2 text-center text-sm font-bold text-slate-950">
+                            <p className="mt-2 rounded-full bg-blue-800 px-4 py-2 text-center text-sm font-bold text-slate-000">
                                 Top Secret SCI
                             </p>
                         </div>
