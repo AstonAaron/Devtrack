@@ -71,6 +71,7 @@ export default function Home() {
                                         <li>HTML / CSS</li>
                                         <li>TypeScript</li>
                                         <li>Tailwind CSS</li>
+                                        <li>Next.JS</li>
                                     </ul>
                                 </div>
 
@@ -83,6 +84,7 @@ export default function Home() {
                                         <li>Vite</li>
                                         <li>Git</li>
                                         <li>shadcn UI</li>
+                                        <li>Vercel</li>
                                     </ul>
                                 </div>
                             </div>
