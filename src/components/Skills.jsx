@@ -67,15 +67,15 @@ export default function Skills() {
 
     return (
         <Component backgroundColor="rgb(2, 6, 23)">
-            <main className="min-h-svh text-slate-100 px-6 py-10 relative z-10">
-                <div className="mx-auto max-w-5xl space-y-12">
-                    <section className="rounded-3xl border border-white/10 bg-slate-900/80 p-8 shadow-2xl backdrop-blur-xl">
+            <main className="min-h-svh text-slate-100 px-4 md:px-6 py-8 md:py-10 relative z-10">
+                <div className="mx-auto max-w-5xl space-y-8 md:space-y-12">
+                    <section className="rounded-3xl border border-white/10 bg-slate-900/80 p-6 md:p-8 shadow-2xl backdrop-blur-xl">
                         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                             <div>
-                                <h1 className="text-3xl font-semibold text-white">
+                                <h1 className="text-2xl md:text-3xl font-semibold text-white">
                                     Dark Mode Showcase
                                 </h1>
-                                <p className="mt-2 max-w-2xl text-slate-300">
+                                <p className="mt-2 max-w-2xl text-slate-300 text-sm md:text-base">
                                     Toggle the dark mode preview using JavaScript. This section
                                     updates the page theme by adding or removing the
                                     <span className="font-semibold text-white"> dark</span> class on
@@ -84,26 +84,26 @@ export default function Skills() {
                             </div>
                             <button
                                 onClick={() => setIsDark((prev) => !prev)}
-                                className="rounded-full bg-cyan-500 px-5 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/30 transition hover:-translate-y-0.5 hover:bg-cyan-400">
+                                className="rounded-full bg-cyan-500 px-4 md:px-5 py-2 md:py-3 text-xs md:text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/30 transition hover:-translate-y-0.5 hover:bg-cyan-400 w-fit">
                                 {isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
                             </button>
                         </div>
 
-                        <div className="mt-8 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+                        <div className="mt-6 md:mt-8 grid gap-4 md:gap-6 lg:grid-cols-[1.4fr_1fr]">
                             <div
-                                className={`rounded-3xl border p-6 shadow-inner transition ${isDark ? "border-slate-700 bg-slate-950" : "border-slate-300 bg-white text-slate-950"}`}>
-                                <h2 className="text-xl font-semibold">Live Preview</h2>
-                                <p className="mt-3 text-sm leading-6 text-slate-400">
+                                className={`rounded-2xl md:rounded-3xl border p-4 md:p-6 shadow-inner transition ${isDark ? "border-slate-700 bg-slate-950" : "border-slate-300 bg-white text-slate-950"}`}>
+                                <h2 className="text-lg md:text-xl font-semibold">Live Preview</h2>
+                                <p className="mt-2 md:mt-3 text-xs md:text-sm leading-6 text-slate-400">
                                     This prievew demonstrates dark mode function found on many sites
                                 </p>
-                                <div className="mt-6 space-y-3 rounded-2xl border border-current/10 bg-liner-to-br from-cyan-500/10 to-slate-900/20 p-4 text-sm">
-                                    <div className="rounded-2xl bg-slate-950/90 p-4 text-slate-100">
-                                        <p className="font-semibold">Current theme:</p>
-                                        <p>{isDark ? "Dark mode enabled" : "Light mode enabled"}</p>
+                                <div className="mt-4 md:mt-6 space-y-2 md:space-y-3 rounded-xl md:rounded-2xl border border-current/10 bg-liner-to-br from-cyan-500/10 to-slate-900/20 p-3 md:p-4 text-xs md:text-sm">
+                                    <div className="rounded-xl md:rounded-2xl bg-slate-950/90 p-3 md:p-4 text-slate-100">
+                                        <p className="font-semibold text-sm md:text-base">Current theme:</p>
+                                        <p className="text-xs md:text-sm">{isDark ? "Dark mode enabled" : "Light mode enabled"}</p>
                                     </div>
-                                    <div className="rounded-2xl bg-slate-100/95 p-4 text-slate-950">
-                                        <p className="font-semibold">Example content</p>
-                                        <p className="mt-2 text-sm leading-6">
+                                    <div className="rounded-xl md:rounded-2xl bg-slate-100/95 p-3 md:p-4 text-slate-950">
+                                        <p className="font-semibold text-sm md:text-base">Example content</p>
+                                        <p className="mt-2 text-xs md:text-sm leading-6">
                                             This content block shows how text and background colors
                                             change based on the theme state.
                                         </p>
@@ -111,33 +111,33 @@ export default function Skills() {
                                 </div>
                             </div>
 
-                            <div className="rounded-3xl border border-slate-800/90 bg-slate-950 p-6">
-                                <h2 className="text-xl font-semibold text-white">
+                            <div className="rounded-2xl md:rounded-3xl border border-slate-800/90 bg-slate-950 p-4 md:p-6">
+                                <h2 className="text-lg md:text-xl font-semibold text-white">
                                     JavaScript Code
                                 </h2>
-                                <pre className="mt-4 overflow-x-auto rounded-2xl bg-slate-900 p-2 md:p-4 text-xs md:text-sm text-slate-200 shadow-inner">
+                                <pre className="mt-3 md:mt-4 overflow-x-auto rounded-xl md:rounded-2xl bg-slate-900 p-2 md:p-4 text-xs md:text-sm text-slate-200 shadow-inner">
                                     <code>{darkModeJsCode}</code>
                                 </pre>
                             </div>
                         </div>
                     </section>
 
-                    <section className="rounded-3xl border border-white/10 bg-slate-900/80 p-8 shadow-2xl backdrop-blur-xl">
-                        <h2 className="text-3xl font-semibold text-white mb-6">Clock & Calendar</h2>
+                    <section className="rounded-3xl border border-white/10 bg-slate-900/80 p-6 md:p-8 shadow-2xl backdrop-blur-xl">
+                        <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4 md:mb-6">Clock & Calendar</h2>
 
-                        <div className="grid gap-6 md:grid-cols-2">
+                        <div className="grid gap-4 md:gap-6 md:grid-cols-2">
                             {/* Clock */}
-                            <div className="rounded-3xl border border-slate-800/90 bg-slate-950 p-6 flex flex-col items-center justify-center min-h-48">
+                            <div className="rounded-2xl md:rounded-3xl border border-slate-800/90 bg-slate-950 p-4 md:p-6 flex flex-col items-center justify-center min-h-40 md:min-h-48">
                                 <div className="text-center">
-                                    <p className="text-slate-400 text-sm mb-2">Current Time</p>
-                                    <div className="font-mono text-5xl font-bold text-cyan-400">
+                                    <p className="text-slate-400 text-xs md:text-sm mb-2">Current Time</p>
+                                    <div className="font-mono text-3xl md:text-5xl font-bold text-cyan-400">
                                         {formattedTime}
                                     </div>
-                                    <p className="text-slate-400 text-sm mt-4">
+                                    <p className="text-slate-400 text-xs md:text-sm mt-3 md:mt-4 leading-tight">
                                         {time.toLocaleDateString("en-US", {
-                                            weekday: "long",
+                                            weekday: "short",
                                             year: "numeric",
-                                            month: "long",
+                                            month: "short",
                                             day: "numeric"
                                         })}
                                     </p>
@@ -145,18 +145,18 @@ export default function Skills() {
                             </div>
 
                             {/* Calendar */}
-                            <div className="rounded-3xl border border-slate-800/90 bg-slate-950 p-6">
-                                <div className="text-center mb-4">
-                                    <h3 className="text-lg font-semibold text-white">
+                            <div className="rounded-2xl md:rounded-3xl border border-slate-800/90 bg-slate-950 p-4 md:p-6">
+                                <div className="text-center mb-3 md:mb-4">
+                                    <h3 className="text-base md:text-lg font-semibold text-white">
                                         {monthName} {year}
                                     </h3>
                                 </div>
 
-                                <div className="grid grid-cols-7 gap-1">
-                                    {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
+                                <div className="grid grid-cols-7 gap-0.5 md:gap-1">
+                                    {["S", "M", "T", "W", "T", "F", "S"].map((day) => (
                                         <div
                                             key={day}
-                                            className="text-center text-xs font-semibold text-cyan-400 py-2"
+                                            className="text-center text-xs md:text-xs font-semibold text-cyan-400 py-1 md:py-2"
                                         >
                                             {day}
                                         </div>
@@ -165,7 +165,7 @@ export default function Skills() {
                                     {days.map((day, index) => (
                                         <div
                                             key={index}
-                                            className={`text-center py-2 rounded text-sm ${
+                                            className={`text-center py-1 md:py-2 rounded text-xs md:text-sm ${
                                                 day === null
                                                     ? ""
                                                     : day === currentDate.getDate()
@@ -182,14 +182,14 @@ export default function Skills() {
                     </section>
 
                     <section className="rounded-3xl border border-white/10 bg-slate-900/80 p-8 shadow-2xl backdrop-blur-xl">
-                        <h2 className="text-3xl font-semibold text-white">HTML Carousel Example</h2>
-                        <p className="mt-3 max-w-2xl text-slate-300">
-                            This section shows a simple HTML structure for a carousel component. Carousel is 
+                        <h2 className="text-2xl md:text-3xl font-semibold text-white">HTML Carousel Example</h2>
+                        <p className="mt-2 md:mt-3 max-w-2xl text-slate-300 text-sm md:text-base">
+                            This section shows a simple HTML structure for a carousel component. Carousel is
                             how you can convay multiple images in a small amount of space.
                         </p>
 
-                        <div className="mt-6 rounded-3xl border border-slate-800 bg-slate-950 p-6">
-                            <pre className="overflow-x-auto rounded-2xl bg-slate-900 p-2 md:p-4 text-xs md:text-sm text-slate-200">
+                        <div className="mt-4 md:mt-6 rounded-2xl md:rounded-3xl border border-slate-800 bg-slate-950 p-4 md:p-6">
+                            <pre className="overflow-x-auto rounded-xl md:rounded-2xl bg-slate-900 p-2 md:p-4 text-xs md:text-sm text-slate-200">
                                 <code>{carouselHtmlCode}</code>
                             </pre>
                         </div>
