@@ -78,7 +78,9 @@ export default function Home() {
                     }
                 `}</style>
 
-                <h2 className="wavy-text">Welcome! Check out the tabs to explore my work! Or learn a bit about myself first.</h2>
+                <h2 className="hidden sm:block wavy-text">
+                     Welcome! Check out the tabs to explore my work! Or learn a bit about myself first.
+                    </h2>
 
                 <section className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl backdrop-blur-xl">
                     <div className="grid gap-6 lg:grid-cols-[280px_1fr] lg:items-center">
@@ -173,10 +175,10 @@ export default function Home() {
                     </div>
                 </section>
 
-                <div className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl backdrop-blur-xl">
-                    <OrbitingSkills />
-                </div>
-
+                <div className="hidden md:block w-full rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl backdrop-blur-xl">
+                        <OrbitingSkills />
+                    </div>
+                    
                 {/* Training & Clearance */}
                 <section className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl backdrop-blur-xl">
                     <h2 className="mb-4 text-3xl font-semibold text-white">
