@@ -31,7 +31,7 @@ export default function Contact() {
 
                         {/* LinkedIn */}
                         <a
-                            href="https://linkedin.com"
+                            href="https://www.linkedin.com/in/aaron-aston-970776377"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="rounded-2xl border border-white/10 bg-slate-900 p-8 transition hover:-translate-y-1 hover:border-cyan-400 hover:bg-slate-800">
@@ -66,7 +66,7 @@ export default function Contact() {
                                 <input
                                     type="text"
                                     name="subject"
-                                    placeholder="Enter subject..."
+                                    placeholder="What you want to talk about?..."
                                     required
                                     className="w-full rounded-xl border border-white/10 bg-slate-800 px-4 py-3 text-white outline-none transition focus:border-cyan-400"
                                 />
@@ -81,7 +81,7 @@ export default function Contact() {
                                 <textarea
                                     name="message"
                                     rows="6"
-                                    placeholder="Write your message..."
+                                    placeholder="Please provide details here..."
                                     required
                                     className="w-full rounded-xl border border-white/10 bg-slate-800 px-4 py-3 text-white outline-none transition focus:border-cyan-400"></textarea>
                             </div>
@@ -90,7 +90,7 @@ export default function Contact() {
                             <button
                                 type="submit"
                                 className="w-full rounded-xl bg-cyan-400 px-6 py-4 text-lg font-semibold text-slate-950 transition hover:scale-[1.02] hover:bg-cyan-300">
-                                Send Message
+                                Submit Message
                             </button>
                         </form>
                     </div>

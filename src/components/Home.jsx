@@ -78,7 +78,7 @@ export default function Home() {
                     }
                 `}</style>
 
-                <h2 className="wavy-text">Check out the tabs to explore further</h2>
+                <h2 className="wavy-text">Welcome! Check out the tabs to explore my work! Or learn a bit about myself first.</h2>
 
                 <section className="w-full rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl backdrop-blur-xl">
                     <div className="grid gap-6 lg:grid-cols-[280px_1fr] lg:items-center">
@@ -96,8 +96,8 @@ export default function Home() {
                             <p className="text-slate-300 leading-7">
                                 After 10 years of serving in the United States Navy, I have
                                 transferred my mechanical and electrical engineering skills into
-                                programming. I build modern, responsive web experiences with both
-                                front-end and back-end technologies.
+                                programming. My passion is to build modern, responsive web experiences with both
+                                front-end and back-end technologies. 
                             </p>
 
                             <div className="grid gap-3 sm:grid-cols-2">
@@ -167,7 +167,7 @@ export default function Home() {
                                 <li>Led and supervised teams of sailors</li>
                                 <li>Mentored junior sailors and supported professional growth</li>
                                 <li>Managed training, maintenance, operations, and logistics</li>
-                                <li>Coordinated Anti-Terrorism training for two commands</li>
+                                <li>Coordinated Anti-Terrorism training for two commands of 300.</li>
                             </ul>
                         </div>
                     </div>

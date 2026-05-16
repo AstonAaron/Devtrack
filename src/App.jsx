@@ -13,7 +13,7 @@ export default function App() {
     const [loading, setLoading] = useState(true);
     const [activePage, setActivePage] = useState("home");
 
-    const matrixSymbols = "アイウエオカキクケコサシスセソ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ@$#%&";
+    const matrixSymbols = "アイウエオカキクケコサシスセソ0123456789AAHOHMYGODCANYOUREADTHIS?!Z@$#%&";
 
     const rainColumns = useMemo(() => {
         return Array.from({ length: 35 }, (_, index) => ({
